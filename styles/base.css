@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 2fr 2fr 2fr ;
+    min-height: 100vh;
+    background-color: white; /* Set a background color for the entire body */
+  }
+
+header {
+    background-color: rgb(8, 61, 60);
+    grid-column: 1/-1;
+    height: 13rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    margin-right: 10px; /*creates space between the image and the name*/
+    padding: 6px;
+    box-shadow: 0 10px 15px black; 
+    width: 115px;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 10px;
+
+} 
+
+header h1 {
+    margin: 0; /*removes the default margin*/
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aqua;
+}
+
+nav {
+    background-color: black;
+    height: 20rem;
+    margin-top: -20px;
+    grid-column: 1/-1;
+}
+
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 20px;    
+}
+nav a:hover {
+    color: aqua;
+}
+
+.heading { 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center; /* to center text withing the div*/
+}
+
+.heading hr {
+width: 70%;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border: solid rgb(8, 61, 60);
+   border-width: 1px;
+   margin-top: 10px;
+   margin-left: 7rem;
+   margin-right: 7rem;
+   border-radius: 10px;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.card h3 {
+    background-color:  rgb(8, 61, 60);
+    color: white;
+    padding: 1rem;
+    width: calc(100% - -2rem); /*Width to consider padding on both sides*/
+    border-radius: 7px;
+    margin-top: 0;
+    text-align: center;
+  
+
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.card ul {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+footer {
+    background-color: rgb(8, 61, 60);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: -250px;
+}
