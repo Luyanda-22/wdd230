@@ -126,34 +126,3 @@ footer {
     margin-top: 15px;
     margin-bottom: -250px;
 }
-
-/*Larger views css******************************************************/
-
-@media screen and (min-width: 640px){
-    nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        flex: 1 1 100%
-    }
-
-    .card {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    body main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    main p {
-        margin: 35px;
-        padding: 4.1px;
-        
-    }
-
-    
-
-}
