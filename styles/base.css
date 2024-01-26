@@ -63,12 +63,13 @@ nav a:hover {
     color: aqua;
 }
 
+
 .heading { 
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   text-align: center; /* to center text withing the div*/
+   text-align: center; 
 }
 
 .heading hr {
@@ -79,7 +80,7 @@ width: 70%;
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
+   justify-content: block;
    border: solid rgb(8, 61, 60);
    border-width: 1px;
    margin-top: 5px;
@@ -101,6 +102,7 @@ width: 70%;
     margin-top: 0;
     text-align: center;
 }
+
 
 .card a {
     color: rgb(2, 80, 73);
@@ -125,4 +127,51 @@ footer {
     margin-bottom: 50px;
     margin-top: 15px;
     margin-bottom: -250px;
+}
+
+
+
+/* small view navigation */
+
+@media screen and (max-width: 767px) {
+
+
+    #menu {
+        font-size: 1rem;
+        /*border: 1px solid rgba(0,0,0,.3);
+        padding: 3px 7px 6px;*/
+        background-color: black;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    #menu::before {
+        content: "🟰";
+    }
+
+    #menu.open::before {
+        content: "❌";
+    }
+
+    /* when the button is clicked - the open class is toggled (added/removed) */
+    .open a {
+        display: block;
+    }
+
+    .navigation {
+        display: none; /* Initially hide the navigation */
+
+    }
+
+    .navigation.open {
+        display: block; /* Show the navigation when open class is applied */
+    }
+
+    iframe {
+        width: 480px;
+        height: 300px;
+        padding: 10px;
+    }
+
 }
