@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(3, 3, 49);
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    border: 1px solid rgb(166, 166, 176);
+    background-color:rgb(232, 232, 254);
+    margin: 50px;
+    margin-top: 15px;
+    padding: 10px;
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
+}
+
+.card h3 {
+    background-color: rgb(146, 145, 203);
+    color: white;
+    margin: -10px;
+    padding: 20px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+img {
+    width: 100%;
+    border: 1px solid rgb(172, 172, 180);
+}
+
+footer {
+   text-align: center;
+   justify-content: center; 
+   background-color: rgb(3, 3, 49);
+   color: white;
+   padding: 30px;
+}
+
+/*Medium View********************************************************/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card h3 {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .card {
+        margin: 20px;
+    }
+
+    #card3 {
+        display: grid;
+        grid-column: 1/-1;
+        margin-top: 20px;
+    }
+
+    #cards {
+        padding-bottom: 80px;
+    }
+}
+
+/*Large views****************************************************************/
+
+@media (min-width: 1025px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card h3 {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+
+    }
+}
