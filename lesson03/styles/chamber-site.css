@@ -1,0 +1,40 @@
+.palette {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100vh;
+    height: 5rem;
+    margin: 0;
+    border: solid black 2px;
+    color: white;
+}
+
+.green { 
+    background-color: #08552d; 
+}
+
+.mustard { 
+    background-color: #FCC937;
+    color: black;
+ }
+
+.black { 
+    background-color: #050505; 
+}
+
+.white { 
+    background-color: white; 
+    color: black;
+}
+
+.TNR {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Gill-Sans {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.palette {
+text-align: center;
+}
