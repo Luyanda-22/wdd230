@@ -16,7 +16,7 @@ const formattedDate = lastModifiedDate.toLocaleString();
 //Updatting the content of the element wit id "lastModified"
 document.getElementById("lastModified").textContent = formattedDate;
 
-//Hamburger menu
+//Hamburger menu/////////////////////////////////////////////
 
 const hamburger = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
