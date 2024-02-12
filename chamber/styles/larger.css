@@ -132,8 +132,13 @@
             align-items: center;
         }
 
-        
+        #mode {
+            position: absolute;
+            top: 31px;
+            right: 30rem;
+            font-size: 3rem;
+            cursor: pointer;
+            font-size: 2rem;
+        }
 
-
-    
 }

@@ -1,0 +1,20 @@
+@media screen and (min-width: 700px) {
+    .btn {
+        padding: 20px 40px;
+        top: 50%;
+    }
+
+    hr {
+        width: 96%;
+    }
+
+    #mode {
+        position: absolute;
+        top: 31px;
+        right: 16rem;
+        font-size: 3rem;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+}
+

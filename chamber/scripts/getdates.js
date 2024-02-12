@@ -16,7 +16,7 @@ const formattedDate = lastModifiedDate.toLocaleString();
 //Updatting the content of the element wit id "lastModified"
 document.getElementById("lastModified").textContent = formattedDate;
 
-//Hamburger menu
+//Hamburger menu///////////////////////////////////////////////////////////////
 
 const hamburger = document.querySelector('#menu');
 const nav = document.querySelector('nav');
@@ -24,6 +24,29 @@ const nav = document.querySelector('nav');
 hamburger.addEventListener('click', () => {
 	nav.classList.toggle('open');
 	hamburger.classList.toggle('open');
-
-       
+ 
 });
+
+//dark/light mode toggle///////////////////////////////////////////////////////
+
+const modeButton = document.querySelector("#mode");
+const body = document.body;
+
+modeButton.addEventListener("click", () => {
+    if (modeButton.textContent.includes("◉")) {
+        body.style.background = "black";
+        body.style.color = "white";
+		
+    } else {
+        body.style.background = ""; // Remove background color styling
+        body.style.color = "#000";
+		
+
+    }
+
+    // Toggle button text content
+    modeButton.textContent = modeButton.textContent.includes("◉") ? "◎" : "◉";
+});
+
+
+
