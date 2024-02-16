@@ -129,7 +129,34 @@ footer {
     margin-bottom: -250px;
 }
 
+.hero img {
+    width: 100%;
+    height: auto;
+}
 
+.hero {
+    position: relative;
+    display: inline-block; 
+}
+
+.overlay {
+    position: absolute;
+    top: 35%; 
+    left: 65%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(139, 144, 153); 
+    padding: 10px;
+    color: white;
+    text-align: center;
+    white-space: nowrap; 
+    
+}
+
+.overlay h2 {
+    margin: 0; 
+    font-size: 1.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 /* small view navigation */
 
@@ -173,5 +200,20 @@ footer {
         height: 300px;
         padding: 10px;
     }
+
+    .overlay {
+        position: absolute;
+        top: 35%; 
+        left: 65%; 
+        transform: translate(-50%, -50%); 
+        background-color: rgb(139, 144, 153); 
+        padding: 10px;
+        color: white;
+        text-align: center;
+        white-space: nowrap; 
+        
+    }
+    
+    
 
 }
