@@ -33,7 +33,7 @@
 
         .btn {
             position: absolute;
-            top: 50%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px 60px;
@@ -50,7 +50,6 @@
         .btn:hover {
             background-color: #08552d;
             color: white;
-
         }
 
         .hero-image {
@@ -140,5 +139,7 @@
             cursor: pointer;
             font-size: 2rem;
         }
+
+
 
 }

@@ -57,8 +57,13 @@
 
     </Header>
 
-
-    <img src="images/hero-image-banner.jpg" alt="A picture of the city of Johannesburg" class="hero-image">
+    <div class="hero">
+        <picture>
+            <source srcset="images/small-hero.jpg" media="(max-width: 450px)">
+            <source srcset="images/medium-hero.jpg" media="(max-width: 800px)">
+            <img src="images/large-hero.jpg" alt="people in a boardroom" width="1480" height="700">
+        </picture>
+    </div>    
 
     <button class="btn">Join the Chamber</button>
 
@@ -79,9 +84,9 @@
             <h2 id="card2-h2">Weather</h2>
             <hr class="card2-hr">
 
-            <p class="p2">Temperature:</p>
-            <p class="p2">Wind Chill:</p>
-            <p class="p2">Humidity:</p>
+            <p class="p2">Temperature: <span id="temperature"> 70 </span>°F</p>
+            <p class="p2">Wind Chill: <span id="windspeed"> 5.0 </span> mph</p>
+            <p class="p2">Humidity: <span id="windchill"> N/A </span></p>
 
                
         </section>
@@ -99,21 +104,7 @@
         <section class="content">
             <h3>Company name</h3>
 
-            <img src="images/business.jpg" alt="A picture of the city of Johannesburg" class="section-img">
-
-
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
-
-            
-        </section>
-
-        <section class="content">
-            <h3>Company name</h3>
-
-            <img src="images/business.jpg" alt="A picture of the city of Johannesburg" class="section-img">
-
+            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
 
             <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
                 accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
@@ -125,7 +116,19 @@
         <section class="content">
             <h3>Company name</h3>
 
-            <img src="images/business.jpg" alt="A picture of the city of Johannesburg" class="section-img">
+            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
+
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
+                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
+                ea, eaque deserunt voluptates voluptate veniam.</P>
+
+            
+        </section>
+
+        <section class="content">
+            <h3>Company name</h3>
+
+            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
 
 
             <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
@@ -171,6 +174,7 @@
     </footer>
 
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/windchill.js"></script>
 
     
 </body>

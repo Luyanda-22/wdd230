@@ -57,8 +57,9 @@
         margin-right: 10px; /* Removes margin from the last link */
     }
 
-    .hero-image {
+    .hero img{
         width: 100%;
+        height: auto;
         padding-left: 20px;
         padding-right: 20px;
 
@@ -106,6 +107,7 @@
 
     .p2 {
         text-align: center;
+        justify-content: center;
     }
 
     .heading {
@@ -177,7 +179,7 @@
     
     /* small view navigation */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
 
     #menu {
             font-size: 1rem;
