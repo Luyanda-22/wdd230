@@ -13,7 +13,7 @@ const lastModifiedDate = new Date(lastModifiedTimestamp);
 //Formattting the date as a string
 const formattedDate = lastModifiedDate.toLocaleString();
 
-//Updatting the content of the element wit id "lastModified"
+//Updatting the content of the element with id "lastModified"
 document.getElementById("lastModified").textContent = formattedDate;
 
 //Hamburger menu/////////////////////////////////////////////
