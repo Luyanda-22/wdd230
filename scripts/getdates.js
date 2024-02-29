@@ -27,3 +27,19 @@ hamburger.addEventListener('click', () => {
 
        
 });
+
+//Page visits/////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+	// Retrieving the current visit count from localStorage
+	let visitCount = localStorage.getItem("visitCount");
+
+	// If visitCount is null (first visit), set it to 1, otherwise increment it
+	visitCount = visitCount ? parseInt(visitCount) + 1 : 1;
+
+	// Updating the visit count in the localStorage
+	localStorage.setItem("visitCount", visitCount);
+
+	// Updating the visit count display on the page
+	document.getElementById("visit-count").innerText = visitCount;
+});
