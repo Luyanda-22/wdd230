@@ -48,5 +48,47 @@ modeButton.addEventListener("click", () => {
     modeButton.textContent = modeButton.textContent.includes("◉") ? "◎" : "◉";
 });
 
+//Discover page//////////////////////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebarContent = document.getElementById("sidebar-content");
+    const visitCount = document.getElementById("visit-count");
+
+    // Get the current date
+    const currentDate = new Date();
+    const currentDateString = currentDate.toDateString();
+
+    // Retrieve the last visit date from localStorage
+    const lastVisitDateString = localStorage.getItem("lastVisitDate");
+
+    // Retrieve visit count from localStorage
+    let visitCountValue = parseInt(localStorage.getItem("visitCount")) || 0;
+
+    // Increment visit count
+    visitCount.textContent = visitCountValue;
+
+    if (lastVisitDateString) {
+        const lastVisitDate = new Date(lastVisitDateString);
+        const timeDifference = currentDate - lastVisitDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysDifference === 0) {
+            sidebarContent.textContent = "Back so soon! Awesome!";
+        } else {
+            const message = daysDifference === 1 ? "day" : "days";
+            sidebarContent.textContent = `You last visited ${daysDifference} ${message} ago.`;
+        }
+    } else {
+        sidebarContent.textContent = "Welcome! Let us know if you have any questions.";
+    }
+
+    // Store the current visit date in localStorage
+    localStorage.setItem("lastVisitDate", currentDateString);
+
+    // Update visit count in localStorage
+    visitCountValue++;
+    localStorage.setItem("visitCount", visitCountValue.toString());
+});
+
 
 

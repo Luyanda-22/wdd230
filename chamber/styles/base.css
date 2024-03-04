@@ -212,3 +212,65 @@
         display: inline;
     }
 }
+
+/*Discover page////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-h3, .s-p{
+        margin-left: 1rem;
+    }
+
+    aside {
+        order: 1; /* Moves the aside abovethe main content */
+    }
+
+    aside .side-card {
+        margin-bottom: 20px; /* Adds some space between the side card and images */
+    }
+
+    aside img {
+        display: block;
+        margin-bottom: 20px; /* Adds some space between the images */
+        padding: 1rem;
+    }
+
+    .photo-grid{
+        order: 2; /* Moves the main content below the aside */
+    }
+
+    .photo-grid figure {
+        margin-bottom: 20px; /* Adds some space between the figures */
+    }
+
+    aside img, .photo-grid img {
+        display: block;
+        width: 100%; /* Set the width of images to 100% */
+        margin-bottom: 20px; /* Adds some space between the images */
+
+    }
+
+    .side-card {
+        background-color: #a29b9b;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    
