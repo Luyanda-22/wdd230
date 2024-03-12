@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+
+
+</head>
+
+
+
+<body class="form-body">
+
+    <Header class="header-container">
+        <img src="images/Luyanda Mavuma.jpg" alt="A picture of me" width="200" height="auto">
+        <h1>Luyanda Mavuma</h1>
+    </Header>
+
+    <button id="menu"></button>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="lesson03/chamber-site-plan.html"> Site Plan </a></li>
+            <li><a href="chamber/"> Chamber </a></li>
+            <li><a href="https://www.byui.edu/"> BYU-Idaho </a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng"> Scripture </a></li>
+        </ul>
+    </nav>
+
+    <main class="form-main">
+        <div class="form-container">
+            <form  id="myForm" action="record.html" method="get">
+    
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <br>
+                
+                <label for="passwrd">Password:</label>
+                <input type="password" id="passwrd" name="passwrd"
+                pattern=".{8,}" title="Eight or more characters">
+                
+                <label for="confirmPasswrd">Confirm Password:</label>
+                <input type="password" id="confirmPasswrd" name="confirmPasswrd" pattern=".{8,}" title="Eight or more characters" required>
+                <div id="passwordMismatch" class="error-message" style="display: none;">Passwords do not match.</div>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your byui email address" title="A valid byui.edu email address." pattern="[a-zA-Z0-9_.\-]+@byui.edu" required>
+                <input type="submit" value="Validate">
+    
+                <label for="pageRating">Page Rating:</label>
+                <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" value="5">
+                <span id="ratingValue">5</span>
+    
+                <button type="submit">Submit Form</button>
+    
+            </form>
+        </div>
+    </main>
+
+<footer>
+    <p> &copy; <span id="copyright"></span></p>
+    <p>Luyanda Mavuma</p>
+    <p>South Africa</p>
+    <p>Last Modified: <span id="lastModified"></span></p>        
+</footer>
+
+<script src="scripts/form.js"></script>
+<script src="scripts/getdates.js"></script>
+
+    
+</body>
+</html>
