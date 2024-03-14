@@ -29,6 +29,7 @@
     <meta property="og:url" content="https://luyanda-22.github.io/wdd230/">
 
 </head>
+
 <body> 
 
     <Header>
@@ -46,7 +47,7 @@
                     <li><a href="#" >Home</a></li>
                     <li><a href="discover.html" >Discover</a></li>
                     <li><a href="#" >Directory</a></li>
-                    <li><a href="join.html" >Join</a></li>
+                    <li><a href="#" >Join</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,78 +68,54 @@
 
     <button class="btn">Join the Chamber</button>
 
-    <main>
-
-        <section class="card" id="card1">
-            <h2>Events</h2>
-            <hr>
-
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
-
+    <main class="the-form">
+        <div class="form-container">
+            <form action="thankyou.html" method="get">
+                <label for="first_name">First Name:</label><br>
+                <input type="text" id="first_name" name="first_name" required><br>
             
-        </section>
+                <label for="last_name">Last Name:</label><br>
+                <input type="text" id="last_name" name="last_name" required><br>
+            
+                <label for="position">Position:</label><br>
+                <input type="text" id="position" name="position" required pattern="[a-zA-Z -]{7,}" title="Only alphabets, hyphens, and spaces with a minimum of seven characters"><br>
+            
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
+            
+                <label for="phone">Mobile Phone:</label><br>
+                <input type="tel" id="phone" name="phone" required><br>
+            
+                <label for="organization_name">Organization Name:</label><br>
+                <input type="text" id="organization_name" name="organization_name" required><br>
+            
+                <label for="membership_level">Membership Level:</label><br>
+                    <select id="membership_level" name="membership_level" required>
+                        <option value="NP Membership">NP Membership (No fee)</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select><br>
+            
+                <label for="organization_description">Organization Description:</label><br>
+                <textarea id="organization_description" name="organization_description" rows="4" cols="50"></textarea><br>
+            
+                <input type="hidden" id="form_loaded_time" name="form_loaded_time">
+            
+                <button class="form-button" type="submit">Submit Application</button >
+            </form>
+        </div>
 
-        <section class="card">
-            <h2 id="card2-h2">Weather</h2>
-            <hr class="card2-hr">
-
-            <p class="p2">Temperature: <span id="temperature"> 70 </span>°F</p>
-            <p class="p2">Wind Chill: <span id="windspeed"> 5.0 </span> mph</p>
-            <p class="p2">Humidity: <span id="windchill"> N/A </span></p>
-
-               
-        </section>
+        <div class="benefits-container">
+            <h2 class="benefits-h2">Membership Level Benefits</h2>
+            <ul>
+                <li><strong>NP Membership:</strong> No fee, basic benefits</li>
+                <li><strong>Bronze Membership:</strong> Access to special events</li>
+                <li><strong>Silver Membership:</strong> Training sessions, event discounts</li>
+                <li><strong>Gold Membership:</strong> Advertising opportunities, spotlight positions on the home page</li>
+            </ul>
+        </div>
     </main>
-
-        <heading class="heading">
-
-            <h2>Member Spotlights</h2>
-
-        </heading> 
-        
-    
-    <main> 
-
-        <section class="content">
-            <h3>Company name</h3>
-
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
-
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
-
-            
-        </section>
-
-        <section class="content">
-            <h3>Company name</h3>
-
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
-
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
-
-            
-        </section>
-
-        <section class="content">
-            <h3>Company name</h3>
-
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
-
-
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
-
-        </section>
-
-    </main>
-
     
 
     <footer>
@@ -175,7 +152,6 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/windchill.js"></script>
-
-    
+   
 </body>
 </html>

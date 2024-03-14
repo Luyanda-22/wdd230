@@ -196,3 +196,42 @@
        margin-left: 2.5rem;
     }
 }
+
+/*form////////////////////*/
+
+.form-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form takes 2/3 of the space, Benefits takes 1/3 */
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow to mimic glass effect */
+}
+
+.form-container {
+    grid-column: 1 / 3; /* Form spans across two columns */
+    
+}
+
+.benefits-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: grid; /* Change to grid layout */
+    grid-template-rows: auto 1fr; /* Two rows: one for h2, one for links */
+    grid-gap: 10px; /* Gap between h2 and links */
+    border-top-left-radius: 40px; /* Rounded corners */
+    border-bottom-right-radius: 40px; /* Rounded corners */
+
+}
+
+.benefits-container h2 {
+    grid-row: 1; /* First row for h2 */
+}
+
+.benefits-container ul {
+    grid-row: 2; /* Second row for links */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+}
