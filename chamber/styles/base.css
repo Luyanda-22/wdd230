@@ -172,8 +172,8 @@
     /*Additional styles for cards in dark mode*/
 
     .dark-mode .card, .dark-mode .content {
-        background-color: #333; /* Dark mode background color */
-        color: #fff; /* Dark mode text color */
+        background-color: #333;
+        color: #fff; 
         border-color: #555;
     }
     
@@ -249,7 +249,7 @@
 
     aside img, .photo-grid img {
         display: block;
-        width: 100%; /* Set the width of images to 100% */
+        width: 100%; /* Sets the width of images to 100% */
         margin-bottom: 20px; /* Adds some space between the images */
 
     }
@@ -267,10 +267,10 @@
 /*The forms/////////////////////////////////////////*/
 
 .form-container{
-    border: 2px solid green; /* Apply green border to the form */
-    padding: 20px; /* Add some padding for better appearance */
-    max-width: 400px; /* Set a max-width to prevent form from stretching too wide */
-    margin: 0 auto; /* Center the form horizontally */
+    border: 2px solid green; 
+    padding: 20px; 
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
 /* Style for the labels */
@@ -307,12 +307,12 @@ textarea {
 }
 
 .benefits-container{
-    border: 5px solid #c69f34; /*better appearance */
-    max-width: 400px; /* Set a max-width to prevent form from stretching too wide */
-    margin: 0 auto; /* Center the form horizontally */
+    border: 5px solid #c69f34; 
+    max-width: 400px; 
+    margin: 0 auto; 
     margin-top: 30px;
     padding: 10px;
-    border-top-left-radius: 40px; /* Rounded corners */
-    border-bottom-right-radius: 40px; /* Rounded corners */
+    border-top-left-radius: 40px; 
+    border-bottom-right-radius: 40px; 
 
 }
