@@ -90,6 +90,54 @@ document.addEventListener("DOMContentLoaded", function() {
     localStorage.setItem("visitCount", visitCountValue.toString());
 });
 
+//Members Page//
+
+document.getElementById("list").addEventListener("click", function() {
+  displayMembers('list');
+});
+
+document.getElementById("grid").addEventListener("click", function() {
+  displayMembers('grid');
+});
+
+fetch('data/members.json') //Fetching information from the Json File
+  .then(response => response.json())
+  .then(data => {
+    const membersContainer = document.getElementById('members-container');
+    const companies = data.companies;
+
+    // Function to create HTML for a member card
+    function createMemberCard(company) {
+      return `
+        <div class="member-card">
+          <h2>${company.name}</h2>
+          <p><strong>Address:</strong> ${company.address}</p>
+          <p><strong>Phone:</strong> ${company.phone}</p>
+          <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
+          <p><strong>Membership Level:</strong> ${company.membership_level}</p>
+          <p><strong>Other Info:</strong> ${company.other_info}</p>
+          <img src="images/${company.image}" alt="${company.name} Logo">
+        </div>
+      `;
+    }
+
+    // Function to display member cards
+    function displayMembers(viewType) {
+      membersContainer.innerHTML = '';
+      companies.forEach(company => {
+        const memberCard = createMemberCard(company);
+        membersContainer.innerHTML += memberCard;
+      });
+      membersContainer.className = viewType + '-view';
+    }
+
+    // Initial display
+    displayMembers('grid');
+
+
+
+})
+  .catch(error => console.error('Error fetching member data:', error));
 
 
 

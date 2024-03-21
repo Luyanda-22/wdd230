@@ -1,0 +1,68 @@
+{
+    "companies": [
+      {
+        "name": "Nestle",
+        "address": "Nestlé (South Africa) (Pty) Ltd | Anslow Office Park, 8 Anslow Crescent, Bryanston, 2120",
+        "phone": "+27 (0)11 514 0000",
+        "website": "www.nestle-esar.com",
+        "image": "nestle.png",
+        "membership_level": "Gold",
+        "other_info": "Nestlé is the world’s largest food and beverage company."
+      },
+      {
+        "name": "Rand Water",
+        "address": "552 Impala Road, Glenvista 2058 South Africa",
+        "phone": "0860 10 10 60",
+        "website": "www.randwater.co.za",
+        "image": "rand-water.png",
+        "membership_level": "Silver",
+        "other_info": "Rand Water is the largest bulk water utility in Africa and is one of the largest in the world, providing bulk potable water to over 16 million people in Gauteng, parts of Mpumalanga, the Free State and North West – an area that stretches over 37 000 km2."
+      },
+      {
+        "name": "Spoor Fisher",
+        "address": "Johannesburg, South Africa",
+        "phone": "+27 11 994 5100",
+        "website": "http://www.spoor.com/",
+        "image": "spoor.png",
+        "membership_level": "Bronze",
+        "other_info": "At Spoor & Fisher, we use the power of our intellectual property expertise and authentic business insight to help our clients to protect, manage and enforce valuable IP rights."
+      },
+      {
+        "name": "Elite Risk Acceptances",
+        "address": "Cape Town",
+        "phone": "086-011-1022",
+        "website": "https://eliterisk.co.za/",
+        "image": "elite.jpg",
+        "membership_level": "Gold",
+        "other_info": "Elite provides a personalised and tailored solution to non-life insurance and personal risk management for people with sophisticated needs."
+      },
+      {
+        "name": "Actom",
+        "address": "2 Magnet Road, Knights, 1413",
+        "phone": "+27 (0) 11 820 5111",
+        "website": "www.actom.co.za",
+        "image": "actom.jpg",
+        "membership_level": "Silver",
+        "other_info": "ACTOM is the largest manufacturer, solution provider, repairer, maintainer and distributor of electro-mechanical equipment in Africa, with 33 outlets throughout Sub- Saharan Africa."
+      },
+      {
+        "name": "Vox Telecommunications",
+        "address": "Block D, Rutherford Estate, 1 Scott Street, Waverly, 2090",
+        "phone": "901-234-5678",
+        "website": "info@voxtelecom.co.za",
+        "image": "vox.jpg",
+        "membership_level": "Bronze",
+        "other_info": "Innovation and insight combine in Vox, a market leading end-to-end integrated ICT and infrastructure provider and telecommunications company."
+      },
+      {
+        "name": "ABSA",
+        "address": "7th Floor, Absa Towers West, 15 Troye Street, Johannesburg 2001",
+        "phone": "+27 (0) 11 350 4000",
+        "website": "https://www.absa.co.za",
+        "image": "absa.jpg",
+        "membership_level": "Gold",
+        "other_info": "We’re committed to finding local solutions to uniquely local challenges and everything we do is focussed on adding value."
+      }
+    ]
+  }
+  
