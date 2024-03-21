@@ -43,3 +43,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Updating the visit count display on the page
 	document.getElementById("visit-count").innerText = visitCount;
 });
+
+//Wather/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// OpenWeatherMap API Key
+const apiKey = '04e728cc5f719798f6badd544a8c9295';
+// City Name or Location ID 
+const city = 'Johannesburg';
+
+// Fetch weather data
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+	.then(response => response.json())
+	.then(data => {
+		const weatherDescription = data.weather[0].description;
+		const temperature = data.main.temp;
+		const weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+		// Update HTML elements with weather data
+		document.getElementById('weather-description').textContent = weatherDescription;
+		document.getElementById('temperature').textContent = `Temperature: ${temperature}°C`;
+		document.getElementById('weather-icon').src = weatherIcon;
+		document.getElementById('weather-icon').alt = weatherDescription;
+	})
+	.catch(error => console.error('Error fetching weather data:', error));
