@@ -45,6 +45,11 @@
         </ul>
     </nav>
 
+    <div id="meetGreetBanner">
+        <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+        <button onclick="closeBanner()">❌</button>
+    </div>
+    
     <div class="hero">
 
         <div class="overlay">
@@ -60,6 +65,7 @@
             <img src="images/fav-temple-new.webp" alt="Favorite Latter-day Temple" width="960" height="600">
         </picture>
     </div>
+    
 
     <div class="heading">
         <h2>WDD 230: Web Frontend Development</h2>
@@ -93,13 +99,14 @@
         </section>
 
         <section class="card">
-            <h3 class="h3_2">Information</h3>
-
+            <h3 class="h3_2">Weather Information</h3>
+        
             <p>Johannesburg</p>
-            <p id="weather-description"></p>
+            <p id="weather-description">
             <p id="temperature"></p>
             <img src="" alt="Weather Icon" id="weather-icon" class="weather-icon">
-            <p>Page visits: <span id="visit-count">0</span></p>
+            <div id="forecast"></div> 
+            <p>Page visits: <span id="visit-count"></span></p>
         </section>
     </main>
 

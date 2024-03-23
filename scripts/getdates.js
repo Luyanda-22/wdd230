@@ -24,7 +24,6 @@ const navigation = document.querySelector('.navigation');
 hamburger.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamburger.classList.toggle('open');
-
        
 });
 
@@ -44,25 +43,76 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("visit-count").innerText = visitCount;
 });
 
-//Wather/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Weather//////////////////////////////////////////////////////////////////
 
-// OpenWeatherMap API Key
-const apiKey = '04e728cc5f719798f6badd544a8c9295';
-// City Name or Location ID 
-const city = 'Johannesburg';
+const apiKey = '04e728cc5f719798f6badd544a8c9295'; 
+const city = 'Johannesburg'; 
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
-// Fetch weather data
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-	.then(response => response.json())
-	.then(data => {
-		const weatherDescription = data.weather[0].description;
-		const temperature = data.main.temp;
-		const weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+function fetchWeatherAndForecast() {
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        updateWeatherCard(data);
+        updateForecast(data);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
 
-		// Update HTML elements with weather data
-		document.getElementById('weather-description').textContent = weatherDescription;
-		document.getElementById('temperature').textContent = `Temperature: ${temperature}°C`;
-		document.getElementById('weather-icon').src = weatherIcon;
-		document.getElementById('weather-icon').alt = weatherDescription;
-	})
-	.catch(error => console.error('Error fetching weather data:', error));
+function updateWeatherCard(data) {
+    const currentWeather = data.list[0];
+    document.getElementById('weather-description').textContent = currentWeather.weather[0].description;
+    document.getElementById('temperature').textContent = `${currentWeather.main.temp} °C`;
+    const iconUrl = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
+    document.getElementById('weather-icon').src = iconUrl;
+}
+
+function updateForecast(data) {
+    // Extracting 12:00 (noon) forecasts for simplicity
+    const forecastDays = data.list.filter(forecast => forecast.dt_txt.includes("12:00:00"));
+    
+    // Clearing existing forecast
+    const forecastDiv = document.getElementById('forecast');
+    forecastDiv.innerHTML = '';
+    
+    // Displaying next three days
+    for (let i = 0; i < 3; i++) {
+        const day = forecastDays[i];
+        const date = new Date(day.dt_txt).toDateString();
+        const temp = `${day.main.temp} °C`;
+        const description = day.weather[0].description;
+        
+        const forecastHTML = `<div>
+                                <p>${date}</p>
+                                <p>Temp: ${temp}</p>
+                                <p>${description}</p>
+                              </div>`;
+        forecastDiv.innerHTML += forecastHTML;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchWeatherAndForecast);
+
+
+//Banner////////////////////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+    var today = new Date();
+    var dayOfWeek = today.getDay(); // Sunday - 0, Monday - 1, ..., Saturday - 6
+
+    // Show the banner on Monday (1), Tuesday (2), and Wednesday (3)
+    if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+        document.getElementById('meetGreetBanner').style.display = 'block';
+    }
+});
+
+function closeBanner() {
+    document.getElementById('meetGreetBanner').style.display = 'none';
+}
