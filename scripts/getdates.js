@@ -45,11 +45,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Weather//////////////////////////////////////////////////////////////////
 
-const apiKey = '04e728cc5f719798f6badd544a8c9295'; 
-const city = 'Johannesburg'; 
-const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+// Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+const apiKey = '04e728cc5f719798f6badd544a8c9295';
+const city = 'Johannesburg'; // Replace with your desired city
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-function fetchWeatherAndForecast() {
+// Function to fetch weather data
+function fetchWeather() {
     fetch(url)
     .then(response => {
         if (!response.ok) {
@@ -59,60 +61,19 @@ function fetchWeatherAndForecast() {
     })
     .then(data => {
         updateWeatherCard(data);
-        updateForecast(data);
     })
     .catch(error => {
         console.log(error);
     });
 }
 
+// Function to update the weather card with fetched data
 function updateWeatherCard(data) {
-    const currentWeather = data.list[0];
-    document.getElementById('weather-description').textContent = currentWeather.weather[0].description;
-    document.getElementById('temperature').textContent = `${currentWeather.main.temp} °C`;
-    const iconUrl = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
+    document.getElementById('weather-description').textContent = data.weather[0].description;
+    document.getElementById('temperature').textContent = `${data.main.temp} °C`;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     document.getElementById('weather-icon').src = iconUrl;
 }
 
-function updateForecast(data) {
-    // Extracting 12:00 (noon) forecasts for simplicity
-    const forecastDays = data.list.filter(forecast => forecast.dt_txt.includes("12:00:00"));
-    
-    // Clearing existing forecast
-    const forecastDiv = document.getElementById('forecast');
-    forecastDiv.innerHTML = '';
-    
-    // Displaying next three days
-    for (let i = 0; i < 3; i++) {
-        const day = forecastDays[i];
-        const date = new Date(day.dt_txt).toDateString();
-        const temp = `${day.main.temp} °C`;
-        const description = day.weather[0].description;
-        
-        const forecastHTML = `<div>
-                                <p>${date}</p>
-                                <p>Temp: ${temp}</p>
-                                <p>${description}</p>
-                              </div>`;
-        forecastDiv.innerHTML += forecastHTML;
-    }
-}
-
-document.addEventListener('DOMContentLoaded', fetchWeatherAndForecast);
-
-
-//Banner////////////////////////////////////////////////////////////
-
-document.addEventListener('DOMContentLoaded', function() {
-    var today = new Date();
-    var dayOfWeek = today.getDay(); // Sunday - 0, Monday - 1, ..., Saturday - 6
-
-    // Show the banner on Monday (1), Tuesday (2), and Wednesday (3)
-    if (dayOfWeek >= 1 && dayOfWeek <= 3) {
-        document.getElementById('meetGreetBanner').style.display = 'block';
-    }
-});
-
-function closeBanner() {
-    document.getElementById('meetGreetBanner').style.display = 'none';
-}
+// Fetch weather when the script loads
+document.addEventListener('DOMContentLoaded', fetchWeather);
