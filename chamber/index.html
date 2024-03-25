@@ -55,7 +55,14 @@
 
         <div id="mode">◉</div>
 
+        
+
     </Header>
+
+    <div id="banner">
+        <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+        <button id="closeBanner">X</button>
+    </div>
 
     <div class="hero">
         <picture>
@@ -65,17 +72,16 @@
         </picture>
     </div>    
 
-    <button class="btn">Join the Chamber</button>
+    <a href="join.html" class="btn">Join the Chamber</a>
 
     <main>
+
 
         <section class="card" id="card1">
             <h2>Events</h2>
             <hr>
 
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
+            <P>Business market and presentation held by Founder and Co-Founders of MNL Finds fashion. 24 on Clara Avenue, Rosebank, Johannesburg. Show up for inspiration and ideas.</P>
 
             
         </section>
@@ -84,10 +90,13 @@
             <h2 id="card2-h2">Weather</h2>
             <hr class="card2-hr">
 
-            <p class="p2">Temperature: <span id="temperature"> 70 </span>°F</p>
-            <p class="p2">Wind Chill: <span id="windspeed"> 5.0 </span> mph</p>
-            <p class="p2">Humidity: <span id="windchill"> N/A </span></p>
+            <p class="p2">Temperature: <span id="temperature"></span></p>
+            <p class="p2">Description: <span id="description"></span></p>
 
+            <div id="forecast">
+                <h3 class="weather-h3">3 Day Forecast</h3>
+                <ul id="forecast-list"></ul>
+            </div>
                
         </section>
     </main>
@@ -97,18 +106,16 @@
             <h2>Member Spotlights</h2>
 
         </heading> 
-        
-    
+
+
     <main> 
 
         <section class="content">
             <h3>Company name</h3>
 
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
+            <img src="images/actom.jpg" alt="A picture of the city of Johannesburg" class="section-img">
 
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
+            <P>ACTOM (Pty) Ltd is an industry leader and the largest manufacturer, solution provider, repairer and distributor of electro-mechanical equipment in Africa, employing about 5550 people with an annual order intake in excess of R7.5bn.</P>
 
             
         </section>
@@ -116,11 +123,9 @@
         <section class="content">
             <h3>Company name</h3>
 
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
+            <img src="images/absa.jpg" alt="A picture of the city of Johannesburg" class="section-img">
 
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
+            <P>Absa Group Limited, commonly known simply as Absa and formerly the Amalgamated Banks of South Africa until 2005 and Barclays Africa Group Limited until 2018, is a multinational banking and financial services conglomerate based in Johannesburg, South Africa and listed on the Johannesburg Stock Exchange.</P>
 
             
         </section>
@@ -128,12 +133,10 @@
         <section class="content">
             <h3>Company name</h3>
 
-            <img src="images/business-2.jpg" alt="A picture of the city of Johannesburg" class="section-img">
+            <img src="images/rand-water.png" alt="A picture of the city of Johannesburg" class="section-img">
 
 
-            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam nulla delectus laborum, 
-                accusantium consequatur commodi animi voluptatem obcaecati quae repellendus doloremque, beatae vitae 
-                ea, eaque deserunt voluptates voluptate veniam.</P>
+            <P>Rand Water is the largest bulk water utility in Africa and is one of the largest in the world, providing bulk potable water to more than 11 million people in Gauteng, parts of Mpumalanga, the Free State and North West – an area that stretches over 18 000 km2.</P>
 
         </section>
 
@@ -174,7 +177,7 @@
     </footer>
 
     <script src="scripts/getdates.js"></script>
-    <script src="scripts/windchill.js"></script>
+    <script src="scripts/banner-weather.js"></script>
 
     
 </body>

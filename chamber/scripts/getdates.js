@@ -134,11 +134,5 @@ fetch('data/members.json') //Fetching information from the Json File
     // Initial display
     displayMembers('grid');
 
-
-
 })
-  .catch(error => console.error('Error fetching member data:', error));
-
-
-
 

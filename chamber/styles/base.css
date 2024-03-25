@@ -5,6 +5,7 @@
 
     header {
         background-color: #FCC937;
+        margin-bottom: 40px;
     }
 
     .nav-container{
@@ -16,6 +17,7 @@
 
     .nav-heading {
         margin-left: 10px;
+        margin: 3px;
     }
 
     .nav-heading h1 {
@@ -62,6 +64,7 @@
         height: auto;
         padding-left: 20px;
         padding-right: 20px;
+        margin-top: -2.5rem;
 
     }
 
@@ -162,11 +165,26 @@
 
     #mode {
         position: absolute;
-        top: 10px;
         right: 4rem;
         font-size: 3rem;
         cursor: pointer;
         font-size: 2rem;
+        margin-top: 18px;
+    }
+
+    #banner {
+        background-color: #8d854e;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px;
+        position: absolute; /* Position absolute to place it on top of the hero image */
+        top: 121px; /* Adjust top position as needed */
+        left: 0;
+        width: 100%; /* Span the whole screen */
+    }
+
+    .weather-h3 {
+        margin: 30px;
     }
 
     /*Additional styles for cards in dark mode*/
@@ -205,11 +223,14 @@
 
     nav {
         display: none; /* Initially hide the navigation */
-
     }
 
     nav.open {
         display: inline;
+    }
+
+    #mode {
+        margin-top: -5.8rem;
     }
 }
 
@@ -341,7 +362,6 @@ textarea {
     margin-bottom: 20px; /* Space below the buttons */
     padding: 10px; /* Padding inside the border */
 }
-
 
 /* Styles for small screens */
 @media screen and (max-width: 768px) {
