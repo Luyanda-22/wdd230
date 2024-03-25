@@ -177,10 +177,10 @@
         color: rgb(0, 0, 0);
         text-align: center;
         padding: 10px;
-        position: absolute; /* Position absolute to place it on top of the hero image */
-        top: 121px; /* Adjust top position as needed */
+        position: absolute; 
+        top: 121px; 
         left: 0;
-        width: 100%; /* Span the whole screen */
+        width: 100%; 
     }
 
     .weather-h3 {
