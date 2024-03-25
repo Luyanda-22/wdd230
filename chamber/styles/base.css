@@ -216,13 +216,12 @@
         content: "✕";
     }
 
-    /* when the button is clicked - the open class is toggled (added/removed) */
     .open a {
         display: inline;
     }
 
     nav {
-        display: none; /* Initially hide the navigation */
+        display: none; 
     }
 
     nav.open {
@@ -247,7 +246,7 @@
     }
 
     aside {
-        order: 1; /* Moves the aside abovethe main content */
+        order: 1; /* Moves the aside above the main content */
     }
 
     aside .side-card {
