@@ -362,6 +362,21 @@ textarea {
     padding: 10px; /* Padding inside the border */
 }
 
+.spotlights {
+    background-color: #ccbd65;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-left: 40px;
+    gap: 20px;
+}
+
+.spotlights img {
+    border: 3px solid #f5f2f2; /* White border */
+
+}
+
 /* Styles for small screens */
 @media screen and (max-width: 768px) {
 
@@ -369,5 +384,9 @@ textarea {
         grid-template-columns: 1fr;
         margin: 30px;
 
+    }
+
+    .spotlights {
+        margin-right: 60px;
     }
 }

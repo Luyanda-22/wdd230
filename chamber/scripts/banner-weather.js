@@ -4,7 +4,7 @@
  const closeButton = document.getElementById('closeBanner');
  const banner = document.getElementById('banner');
 
- // Gettingthe current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+ // Getting the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
  const currentDayOfWeek = new Date().getDay();
 
  // Array to hold the days the banner should appear (Monday, Tuesday, Wednesday)

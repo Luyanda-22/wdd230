@@ -1,0 +1,27 @@
+{
+    "members": [
+      {
+        "companyName": "ACTOM (Pty) Ltd",
+        "image": "images/actom.jpg",
+        "altText": "A picture of the city of Johannesburg",
+        "description": "ACTOM (Pty) Ltd is an industry leader and the largest manufacturer, solution provider, repairer and distributor of electro-mechanical equipment in Africa, employing about 5550 people with an annual order intake in excess of R7.5bn.",
+        "status": "gold"
+      },
+      {
+        "companyName": "Absa Group Limited",
+        "image": "images/absa.jpg",
+        "altText": "A picture of the city of Johannesburg",
+        "description": "Absa Group Limited, commonly known simply as Absa and formerly the Amalgamated Banks of South Africa until 2005 and Barclays Africa Group Limited until 2018, is a multinational banking and financial services conglomerate based in Johannesburg, South Africa and listed on the Johannesburg Stock Exchange.",
+        "status": "silver"
+      },
+      {
+        "companyName": "Rand Water",
+        "image": "images/rand-water.png",
+        "altText": "A picture of the city of Johannesburg",
+        "description": "Rand Water is the largest bulk water utility in Africa and is one of the largest in the world, providing bulk potable water to more than 11 million people in Gauteng, parts of Mpumalanga, the Free State and North West – an area that stretches over 18 000 km2.",
+        "status": "silver"
+      }
+    ]
+  }
+  
+  
