@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Inforamtion</title>
+    <meta name="author" content="Luyanda Mauvma">
+    <meta name="description" content="Cozumel off the shore, motor scooter rental,">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+
+
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <meta name="type" content="website">
+
+    <meta property="og:title" content="Cozumel off the shore motor scooter rental">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.istockphoto.com/photo/maldives-island-gm1442179368-481642124?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fisland%2F&utm_term=island">
+    <meta property="og:url" content="https://luyanda-22.github.io/wdd230/">
+
+
+</head>
+
+<body>
+
+    <Header class="rental-header">
+        <img src="images/scoots-logo.png" alt="Company logo" width="200" height="auto">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html"> Rentals </a></li>
+                <li><a href="reservations.html"> Reservations </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+            </ul>
+        </nav>
+
+    </Header>
+
+    <div class="hero-img">
+
+        <div class="overlay">
+            <h2>Explore the shores of Cozumel at an affordable price</h2>
+            <h3>rent your bike now!</h3>
+            <a href="#" class="btn">BOOK NOW!</a>
+
+        </div>
+
+        <picture>
+            <!-- Mobile View (up to 400px width) -->
+            <source srcset="images/hero-img.webp" media="(max-width: 400px)">
+            <!-- Larger views up to 960px -->
+            <source srcset="images/hero-img.webp" media="(max-width: 960px)">
+            <!-- Fallback for browsers that do not support srcset -->
+            <img src="images/hero-img.webp" alt="Picture of an islan and a bike" width="1200" height="600">
+        </picture>
+    </div>
+
+    <main class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="location">
+                <h3>Near the Playa del Carmen-Cozumel Ferry Dock</h3>
+                <p>Email: <a href="mailto:Info@BRConzumel.com">Info@BRConzumel.com</a></p>
+                <p>Phone: +(52) 01 4373 8798</p>
+            </div>
+            <div class="location">
+                <h3>Near the Terminal Puetra Maya</h3>
+                <p>Email: <a href="mailto:Info@RentABike.com">Info@RentABike.com</a></p>
+                <p>Phone: +(52) 89 5678 7784</p>
+            </div>
+        </div>
+        <div class="map-container">
+            <h3>Playa del Carmen</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d81453.59378089735!2d-87.00146555625783!3d20.544099214881626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m1!2sdock!4m5!1s0x8f4e598d5524e661%3A0xff16922d3d563e0e!2sSan%20Miguel%20de%20Cozumel%20-%20Playa%20del%20Carmen%2C%20Mexico!3m2!1d20.561643999999998!2d-87.0018941!5e0!3m2!1sen!2sza!4v1713051711244!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h3>Terminal Puerta Maya</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.7234078129195!2d-86.9760086247584!3d20.476550481038117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e57491a71c81d%3A0x6933058e58e0ee3d!2sPuerta%20Maya%20Cruise%20Ship%20Maritime%20Terminal!5e0!3m2!1sen!2sza!4v1713051872330!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    
+    
+
+
+    <footer>
+        
+            
+        <section class="home-footer2">
+
+            <p class="home-p"> &copy; <span id="copyright"></span> el Centro de Cozumel</p>
+            <p class="home-p">Built and managed by Luyanda Mavuma</p>
+            <p class="home-p">WDD 230 Final Project</p>
+            <p class="home-p">Last Modified: <span id="lastModified"></span></p> 
+            
+        </section>
+
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    
+    
+</body>
+</html>
+
+

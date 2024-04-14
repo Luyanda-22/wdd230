@@ -1,0 +1,297 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    background-color: white; 
+}
+
+Header {
+    grid-column: 1/-1;
+    display: flex;
+}
+
+nav, ul, li, a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 75px;
+    color: #284323;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+nav a:hover {
+    color: #51702c;
+}
+
+.hero-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    font-size: 30px;
+    position: absolute;
+    top: 55%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    color: rgb(252, 252, 255);
+    text-align: left;
+    white-space: nowrap; 
+    
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+
+.btn:hover {
+    background-color: #284323;
+}
+
+.heading {
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-gap: 5px; /* Gap between images */
+    margin: 2px;
+}
+
+.image-container img {
+    width: 100%; /* images filling their respective grid cells */
+    height: auto; /* Maintaining aspect ratio */
+}
+
+.image-container img:hover {
+    filter: brightness(70%); /* Darkening the image on hover */
+}
+
+.weather-card {
+    width: 100%; 
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+}
+
+.weather-card h2 {
+    margin-top: 0;
+}
+
+.weather-info {
+    display: flex; 
+    justify-content: space-between; /* Evenly distributing items horizontally */
+    flex-wrap: wrap; /* Allowing wrapping of items to multiple lines */
+}
+
+.weather-info p {
+    margin: 10px 0; 
+    flex-basis: calc(33.33% - 20px); /* Distributing items equally with some space between */
+    box-sizing: border-box; /* Include padding in flex-basis calculation */
+}
+
+footer {
+    background-color:#284323;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Rentals Page///////////////////////*/
+
+#book-now-btn {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensures the button is above other content */
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+#book-now-btn:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.rental-header {
+    margin-bottom: auto;
+}
+
+/* Style for each rental item */
+.rental {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-gap: 20px; /* Gap between columns */
+    align-items: center; /* Centers items vertically */
+}
+
+.rental img {
+    width: 100%; /* Set width to fill container */
+    height: auto; /* Set height to fill container */
+    object-fit: cover; /* Maintains aspect ratio */
+}
+
+.rental-details {
+
+    border:solid 8px #5d7559;
+    padding: 80px;
+    color: #284323;
+}
+
+.rental-details h3 {
+    margin: 0; /* Removes margin for consistency */
+}
+
+.rental-details p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
+/*Reservations page///////////////////*/
+
+.reservations-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the two sections */
+}
+
+.card {
+    flex: 0 0 48%; /* Set flex-basis to 48% for each card to allow space for the gap */
+    background-color: #d0e9cb;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid #284323;
+    
+
+}
+
+.rental-agreement ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rental-agreement ul li {
+    margin-bottom: 10px;
+}
+
+.rental-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.rental-form .form-group {
+    margin-bottom: 15px;
+}
+
+.rental-form label {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .reservations-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .card {
+        flex: 1 0 auto; /* Reset flex-basis to auto for full width on smaller screens */
+        margin-bottom: 20px; /* Space between the cards */
+    }
+}
+
+/*Contact page////////////////*/
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 20px; /* Gap between sections */
+}
+
+.contact-info,
+.contact-form {
+    flex: 1; /* Each section takes up equal width */
+}
+
+.map-container {
+    flex: 1 0 100%; /* Map container spans full width */
+}
+
+.contact-info,
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.map-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px; 
+    border: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
